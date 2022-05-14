@@ -6,7 +6,8 @@ export interface Props {
   totalPages: number;
   handlePagination: (page: number) => void;
   totalCount: number;
-  pageCount: number
+  pageCount: number;
+  itemCount: number
 }
 export const PaginationComponent: React.FC<Props> = ({
   page,
@@ -14,10 +15,13 @@ export const PaginationComponent: React.FC<Props> = ({
   handlePagination,
   totalCount, 
   pageCount,
+  itemCount
 }) => {
+  const firstItem: number = (page*pageCount)-pageCount + 1
+  const lastItem: number|string = itemCount < pageCount ? page*pageCount-itemCount : page*pageCount 
   return (
     <div className={styles.pagination}>
-      <div className={styles.countItems}>{page===1? 1 : (page*pageCount)-3}-{page*pageCount} of {totalCount} items</div>
+      <div className={styles.countItems}>{page ===  1 ? 1 : firstItem}-{firstItem===totalCount? '':lastItem} of {totalCount} items</div>
       <div className={styles.paginationWrapper}>
         {page !== 1 && (
           <button

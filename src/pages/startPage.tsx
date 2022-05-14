@@ -17,6 +17,7 @@ const StartPage =()=>{
     const {page} = useAppSelector((state)=>state.user);
     const {pageCount} = useAppSelector((state)=>state.user);
     const totalPages = Math.ceil(reposTotalCount/pageCount);
+    const itemCount = userRepos.length
     const onPageChanged = (page: number) => {
         dispatch(setPage({page:page}));
         dispatch(getRepos(user ? user.login  : '', page))
@@ -40,6 +41,7 @@ const StartPage =()=>{
                     handlePagination={onPageChanged}
                     totalCount={reposTotalCount}
                     pageCount = {pageCount}
+                    itemCount = {itemCount}
                 />: ''}
             </div> 
          : user===undefined
