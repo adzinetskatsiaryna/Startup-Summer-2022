@@ -9,8 +9,8 @@ export const instance = axios.create({
 export const api = {
     getUser(username: string){
        return instance.get(`/users/${username}`) 
-    },
-    getUserRepos(username: string, pageCount: number, page: number){      
+    },  
+    getUserRepos(username: string, pageCount: number, page: number){ 
         return instance.get(`/users/${username}/repos?per_page=${pageCount}&page=${page}`)
     }
 }

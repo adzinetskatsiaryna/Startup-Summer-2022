@@ -60,7 +60,6 @@ const initialState:InitialStateType = {
     error:'',
     isLoading: false
 };
-
 const userSlice = createSlice({
     name: "user",
     initialState,
@@ -107,6 +106,7 @@ export const { setIsLoading, setUser, setError, setPage,  setTotalCount, setRepo
     };
     
     export const getRepos = (username: string, page: number) => (dispatch: Dispatch<any>, getState: any)=>{
+        
         const {pageCount} = getState().user;
         dispatch(setIsLoading(true))
         api.getUserRepos(username, pageCount, page)

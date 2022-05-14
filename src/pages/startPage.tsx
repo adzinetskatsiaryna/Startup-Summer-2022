@@ -18,12 +18,12 @@ const StartPage =()=>{
     const {pageCount} = useAppSelector((state)=>state.user);
     const totalPages = Math.ceil(reposTotalCount/pageCount);
     const itemCount = userRepos.length
-    const onPageChanged = (page: number) => {
+    const dispatch = useAppDispatch();
+    const onPageChanged = (page:number) => {
         dispatch(setPage({page:page}));
         dispatch(getRepos(user ? user.login  : '', page))
-    };
-  
-    const dispatch = useAppDispatch();
+    }
+    
     return (
         <div className={styles.container}>
          {user && reposTotalCount ? 
