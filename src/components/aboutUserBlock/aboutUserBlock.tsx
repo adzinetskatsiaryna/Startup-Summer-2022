@@ -27,7 +27,7 @@ const AboutUser = ({user, ...props}: PropsType)=>{
    <div className={styles.aboutUserContainer}>
         <img src={user?.avatar_url} alt="userIcon" className={styles.iconUser} />
         <h1 className={styles.userName} >{user?.name}</h1>
-        <a href={user.html_url} target="_blank" rel="noreferrer" className={styles.userLogin} >{user?.login}</a>
+        <a href={user.html_url} target="_blank" rel="noopener noreferrer" className={styles.userLogin} >{user?.login}</a>
         <div  className={styles.userFollowContainer}>
             <span className={styles.userFollowBox}>
                 <img src={iconTwoPerson} alt="icon" />
