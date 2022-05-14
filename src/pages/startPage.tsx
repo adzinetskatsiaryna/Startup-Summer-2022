@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../components/hooks/hooks";
 import { getRepos, RepoTupe, setPage } from "../store/slices/userSlice";
 import userNotFoundIcon from "../assets/images/person.svg"

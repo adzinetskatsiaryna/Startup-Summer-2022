@@ -1,9 +1,8 @@
 import styles from "./header.module.scss";
 import github from '../../assets/images/github.svg'
 import Input from "../input/searchInput";
-import { useDispatch } from "react-redux";
 import { getRepos, getUser } from "../../store/slices/userSlice";
-import { useAppDispatch, useAppSelector } from "../hooks/hooks";
+import { useAppDispatch} from "../hooks/hooks";
 
 const Header = () => {
     const dispatch = useAppDispatch();

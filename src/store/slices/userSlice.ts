@@ -1,6 +1,5 @@
-import { createSlice, Dispatch, PayloadAction } from "@reduxjs/toolkit"
+import { createSlice, Dispatch } from "@reduxjs/toolkit"
 import { api } from "../../api/api"
-import { RootState } from "../store"
 
 export type RepoTupe = {
     name: string
