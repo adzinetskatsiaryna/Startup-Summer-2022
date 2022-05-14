@@ -1,0 +1,63 @@
+@import "../../pages/startPage.module.scss";
+.paginationWrapper {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.separator {
+  width: 1rem;
+  margin: 0 0.25rem;
+  color: #808080;
+}
+.pageNot{
+  display: none;
+}
+.pageItem {
+  background: transparent;
+  border: none;
+  height: 2rem;
+  width: 2rem;
+  margin: 0 0.25rem;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #808080;
+&:hover {
+    text-decoration: none;
+    color: #0064EB;
+  }
+&:focus {
+    outline: 0;
+  }
+}
+.active {
+  background-color: #0064EB;
+  color: #FFFFFF;
+}
+.sides {
+  box-shadow: transparent 0px 0px 0px 1px, transparent 0px 0px 0px 4px, rgba(0, 0, 0, 0.18) 0px 2px 4px;
+&:hover {
+    text-decoration: none;
+    box-shadow: transparent 0px 0px 0px 1px, transparent 0px 0px 0px 4px, rgba(0, 0, 0, 0.12) 0px 6px 16px;
+  }
+}
+.pagination{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center
+}
+.countItems{
+  font-family: $fontFamily;
+  color: #808080;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  margin-right: 25px;
+}
+@media all and (max-width: 520px){
+  .pagination{
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-right: 0;
+  }
+}

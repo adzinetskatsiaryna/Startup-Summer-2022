@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Noticia+Text:ital@1&display=swap');
+$fontFamily: 'Inter';
+:export{
+    fontFamily: $fontFamily
+}
+
+.startPage, .userNotFoundPage, .emptyRepoPage{
+    display: flex;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $fontFamily; 
+    font-style: normal;   
+    height: 100%;
+    min-height: 90vh;
+}
+.text{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 140%;
+    text-align: center;
+    color: #808080;
+    max-width: 243px;
+    width: 100%;
+    margin: 46px 0 0 0;
+}
+
+.userPageContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 30px;
+}
+.allRepos{
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 130%;
+    color: #000000;
+    margin-bottom: 13px;
+}
+.container{
+    background: #E5E5E5;
+    height: 100%;
+    min-height: 90vh;
+    padding: 20px 60px;
+}
+.reposBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 24px;
+}
+.pageBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.emptyRepoPageContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 100px;
+}
+@media all and (max-width: 730px){
+    .allRepos{
+        font-size: 25px;  
+    } 
+}
+@media all and (max-width: 420px){
+    .userPageContainer{
+        flex-wrap: wrap;
+    }
+    .allRepos{
+        margin-top: 15px;  
+    }
+    .emptyRepoPageContainer{
+        column-gap: 15px;
+    }
+}

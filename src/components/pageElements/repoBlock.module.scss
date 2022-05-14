@@ -1,0 +1,49 @@
+@import "../../pages/startPage.module.scss";
+.repoContainer{
+    font-family: $fontFamily;
+    background: #FFFFFF;
+    border-radius: 6px;
+    padding: 24px 32px;
+    max-width: 877px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.repoTitle{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 16px;   
+    cursor: pointer;
+    a{
+        text-decoration: none;
+        color: #0064EB;
+        &:hover{
+            color: #808080;
+        }
+    }
+}
+.repoDescription{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+.pageBoxIcon{
+    display: block;
+    max-width: 100%;
+    width: 100%;
+}
+@media all and (max-width: 730px){
+    .repoContainer{
+        padding: 15px;  
+    }
+    .repoTitle{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .pageBoxIcon{
+        width: 100px;
+    }
+}

@@ -1,0 +1,79 @@
+@import "../../pages/startPage.module.scss";
+
+.iconUser{
+    max-width: 280px;
+    width: 100%;
+    min-height: 280px;
+    border-radius: 100%;
+    display: block;
+}
+.userName{
+    font-family: $fontFamily;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 130%;
+    color: #000000;
+    padding: 29px 0 12px 0;
+    margin: 0;
+    cursor: pointer;
+    &:hover{
+       color: #808080; 
+    }
+}
+.userLogin{
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #0064EB;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover{
+      color:  #808080;
+    }
+}
+.userFollow{
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000000;
+    margin: 0 12px;
+}
+.userFollowBox{
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.userFollowContainer{
+    display: flex;
+    margin-top: 25px;
+}
+@media all and (max-width: 730px){
+    .iconUser{
+        max-width: 200px;
+        width: 100%;
+        min-height: 200px;
+    }
+   .userFollowContainer{
+       flex-wrap: wrap;
+   }
+   .userName{
+       font-size: 20px;
+   }
+}
+@media all and (max-width: 530px){
+    .iconUser{
+        max-width: 150px;
+        min-height: 150px;
+    }
+    .iconUser{
+        max-width: 100px;
+        min-height: 100px;
+    }
+}

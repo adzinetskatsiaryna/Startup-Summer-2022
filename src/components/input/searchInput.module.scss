@@ -1,0 +1,24 @@
+.searchInput {
+    background-image: url(../../assets/images/search-input.svg);   
+    background-repeat: no-repeat; 
+    background-position: 12px;  
+    outline: none;   
+    border-radius: 6px; 
+    padding-left: 30px; 
+    height: 40px;  
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.01em; 
+    border: none;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 41px 0 0;
+}
+@media all and (max-width: 320px){
+    .searchInput{
+        line-height: 10px;
+        font-size: 10px;
+    }
+}
+
