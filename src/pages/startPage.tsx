@@ -25,6 +25,7 @@ const StartPage =()=>{
     }
     
     return (
+        <div className={styles.pages}>
         <div className={styles.container}>
          {user && reposTotalCount ? 
             <div className={styles.userPage}>
@@ -59,6 +60,7 @@ const StartPage =()=>{
          
          }
        </div> 
+       </div>
     )
 };
 

@@ -14,13 +14,15 @@ const Header = () => {
     
     return (
         <div className={styles.header}>
+         <div className={styles.container}>
           <span className={styles.icon}><img src={github} alt="github-icon" /></span>
-        <Input 
+            <Input 
             type='text'
             name='search'
             placeholder='Enter GitHub username'
             addItem = {addItem}
-             />       
+             /> 
+         </div>      
        </div>
     )
 };
